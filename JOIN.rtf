@@ -1,0 +1,145 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2578
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 mysql> SELECT ospiti.name, ospiti.lastname, count(prenotazioni_has_ospiti.id) FROM ospiti JOIN prenotazioni_has_ospiti ON prenotazioni_has_ospiti.ospite_id = ospiti.id GROUP BY ospiti.id;\
++-----------+-----------+-----------------------------------+\
+| name      | lastname  | count(prenotazioni_has_ospiti.id) |\
++-----------+-----------+-----------------------------------+\
+| Elizabeth | Romaguera |                                 1 |\
+| Madie     | Sanford   |                                 2 |\
+| Orion     | Hilpert   |                                 1 |\
+| Jessie    | Kozey     |                                 1 |\
+| Shemar    | Keeling   |                                 1 |\
+| Edwardo   | Pacocha   |                                 1 |\
+| Delilah   | Renner    |                                 1 |\
+| Willie    | Borer     |                                 1 |\
+| Tristian  | Koss      |                                 3 |\
+| Helene    | Hansen    |                                 1 |\
+| Zelda     | Johns     |                                 3 |\
+| Hadley    | Collins   |                                 2 |\
+| Deron     | Hand      |                                 1 |\
+| Laurence  | Green     |                                 1 |\
+| Adriana   | Abernathy |                                 2 |\
+| Arlo      | Keeling   |                                 2 |\
+| Nikita    | Donnelly  |                                 2 |\
+| Gillian   | Reichel   |                                 2 |\
+| Shirley   | Brakus    |                                 2 |\
++-----------+-----------+-----------------------------------+\
+19 rows in set (0.00 sec)\
+ SELECT  ospiti.name, ospiti.lastname, prenotazioni_has_ospiti.*  FROM ospiti JOIN prenotazioni_has_ospiti ON prenotazioni_has_ospiti.ospite_id = ospiti.id;\
++-----------+-----------+----+-----------------+-----------+---------------------+---------------------+\
+| name      | lastname  | id | prenotazione_id | ospite_id | created_at          | updated_at          |\
++-----------+-----------+----+-----------------+-----------+---------------------+---------------------+\
+| Madie     | Sanford   |  1 |               1 |        32 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Gillian   | Reichel   |  2 |               2 |        56 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Shirley   | Brakus    |  3 |               3 |        58 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Zelda     | Johns     |  4 |               4 |        46 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Tristian  | Koss      |  5 |               5 |        41 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Zelda     | Johns     |  6 |               6 |        46 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Willie    | Borer     |  7 |               7 |        40 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Helene    | Hansen    |  8 |               8 |        43 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Shirley   | Brakus    |  9 |               9 |        58 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Tristian  | Koss      | 10 |              10 |        41 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Edwardo   | Pacocha   | 11 |              11 |        37 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Orion     | Hilpert   | 12 |              12 |        33 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Zelda     | Johns     | 13 |              13 |        46 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Tristian  | Koss      | 14 |              14 |        41 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Adriana   | Abernathy | 15 |              15 |        51 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Laurence  | Green     | 16 |              16 |        50 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Delilah   | Renner    | 17 |              17 |        38 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Arlo      | Keeling   | 18 |              18 |        54 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Elizabeth | Romaguera | 19 |              19 |        31 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Shemar    | Keeling   | 20 |              20 |        36 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Nikita    | Donnelly  | 21 |              21 |        55 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Jessie    | Kozey     | 22 |              22 |        35 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Hadley    | Collins   | 23 |              23 |        47 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Deron     | Hand      | 24 |              24 |        49 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Adriana   | Abernathy | 25 |              25 |        51 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Nikita    | Donnelly  | 26 |              26 |        55 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Hadley    | Collins   | 27 |              27 |        47 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Madie     | Sanford   | 28 |              28 |        32 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Arlo      | Keeling   | 29 |              29 |        54 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
+| Gillian   | Reichel   | 30 |              30 |        56 | 2018-05-28 13:57:00 | 2018-05-28 13:57:00 |\
++-----------+-----------+----+-----------------+-----------+---------------------+---------------------+\
+30 rows in set (0.02 sec)\
+ SELECT paganti.name, paganti.lastname, price FROM pagamenti JOIN prenotazioni ON  pagamenti.prenotazione_id = prenotazioni.id JOIN paganti ON pagamenti.pagante_id = paganti.id WHERE YEAR(prenotazioni.created_at) = 2018 AND MONTH(prenotazioni.created_at) = 5;\
++-----------+-----------+--------+\
+| name      | lastname  | price  |\
++-----------+-----------+--------+\
+| Russel    | Olson     | 977.00 |\
+| Elizabeth | Romaguera | 671.00 |\
+| Conrad    | Kuhic     |  59.00 |\
+| Lysanne   | Buckridge | 332.00 |\
+| Deron     | Hand      |  67.00 |\
+| Kamron    | Murphy    | 562.00 |\
+| Elizabeth | Romaguera | 614.00 |\
+| Malvina   | Thompson  | 222.00 |\
+| Lysanne   | Buckridge | 152.00 |\
+| Delilah   | Renner    | 822.00 |\
+| Laurence  | Skiles    | 554.00 |\
+| Willie    | Borer     | 416.00 |\
+| Gillian   | Reichel   | 609.00 |\
+| Deron     | Hand      | 508.00 |\
+| Orion     | Hilpert   |  82.00 |\
++-----------+-----------+--------+\
+15 rows in set (0.04 sec)\
+\
+mysql> \
+SELECT SUM(pagamenti.price) FROM prenotazioni JOIN pagamenti ON prenotazioni.id = pagamenti.prenotazione_id  JOIN stanze ON prenotazioni.stanza_id = stanze.id WHERE stanze.floor = 1;\
++----------------------+\
+| SUM(pagamenti.price) |\
++----------------------+\
+|              4509.00 |\
++----------------------+\
+1 row in set (0.03 sec)\
+\
+mysql> \
+mysql> SELECT paganti.name,  paganti.lastname, pagamenti.* FROM prenotazioni JOIN pagamenti ON prenotazioni.id = pagamenti.prenotazione_id JOIN paganti ON pagamenti.pagante_id = paganti.id WHERE prenotazioni.id = 7;\
++-----------+-----------+----+---------+--------+-----------------+------------+---------------------+---------------------+\
+| name      | lastname  | id | status  | price  | prenotazione_id | pagante_id | created_at          | updated_at          |\
++-----------+-----------+----+---------+--------+-----------------+------------+---------------------+---------------------+\
+| Elizabeth | Romaguera |  7 | pending | 993.00 |               7 |          6 | 2018-05-28 13:53:45 | 2018-05-28 13:53:45 |\
++-----------+-----------+----+---------+--------+-----------------+------------+---------------------+---------------------+\
+1 row in set (0.04 sec)\
+SELECT prenotazioni.stanza_id FROM prenotazioni RIGHT JOIN stanze ON prenotazioni.stanza_id = stanze.id;\
++-----------+\
+| stanza_id |\
++-----------+\
+|         1 |\
+|      NULL |\
+|         3 |\
+|         4 |\
+|         4 |\
+|         4 |\
+|         5 |\
+|         6 |\
+|         6 |\
+|         7 |\
+|         8 |\
+|         8 |\
+|         9 |\
+|         9 |\
+|        10 |\
+|        10 |\
+|        10 |\
+|        10 |\
+|        10 |\
+|        11 |\
+|        11 |\
+|        11 |\
+|        12 |\
+|        13 |\
+|        13 |\
+|        13 |\
+|        14 |\
+|        14 |\
+|        15 |\
+|        15 |\
+|        15 |\
++-----------+\
+31 rows in set (0.00 sec)\
+LA stanza 2 non ha ricevuto nessuna prenotazione}
